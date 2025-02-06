@@ -1,19 +1,17 @@
 function firstNonRepeatedChar(s) {
     let charCount = {};
 
-    // Count occurrences of each character
     for (let char of s) {
         charCount[char] = (charCount[char] || 0) + 1;
     }
-
-    // Find the first non-repeating character
+	
     for (let char of s) {
         if (charCount[char] === 1) {
             return char;
         }
     }
 
-    return null; // Return null if no non-repeated character exists
+    return null; 
 }
 
 function findFirstNonRepeated() {
